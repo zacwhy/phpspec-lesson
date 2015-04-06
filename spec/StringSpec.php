@@ -13,4 +13,9 @@ class StringSpec extends ObjectBehavior
         $this->pascalCaseSplit('ProductCategoryController')->shouldReturn(['Product', 'Category', 'Controller']);
     }
 
+    function it_slices_pascal_case_string()
+    {
+        $this->pascalCaseSlice('ProductCategoryController', 0, -1)->shouldReturn('ProductCategory');
+    }
+
 }

@@ -10,4 +10,13 @@ class String
         return $matches[0];
     }
 
+    public function pascalCaseSlice($string, $offset, $length = null)
+    {
+        $input = $this->pascalCaseSplit($string);
+
+        $output = array_slice($input, $offset, $length);
+
+        return join('', $output);
+    }
+
 }
